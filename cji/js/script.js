@@ -24,28 +24,59 @@ function getComputerChoice() {
 }
 
 // Store values and run single test round
-const playerSelection = userInput();
+/* const playerSelection = userInput();
 const computerSelection = getComputerChoice();
 
 console.log(playerSelection);
-console.log(computerSelection);
+console.log(computerSelection); */
 
 function playRound(player, computer) {
     if(player===computer){
-        console.log("It's a tie!")
+        return "It's a tie!";
     } else if(player==='rock' && computer==='paper'){
-        console.log("Computer wins!")
+        return "Computer wins!";
     }  else if(player==='paper' && computer==='scissors'){
-        console.log("Computer wins!")
+        return "Computer wins!";
     }  else if(player==='scissors' && computer==='rock'){
-        console.log("Computer wins!")
+        return "Computer wins!";
     } else if(computer==='rock' && player==='paper'){
-        console.log("Player wins!")
+        return "Player wins!";
     }  else if(computer==='paper' && player==='scissors'){
-        console.log("Player wins!")
+        return "Player wins!";
     }  else {
-        console.log("Player wins!")
+        return "Player wins!";
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
+
+// The Game
+
+// Add variables
+let rounds = 0;
+let battles = 0;
+let playerWins = 0;
+let computerWins = 0;
+let totalVictories = 0;
+
+// Add the game function
+function game() {
+    while(rounds < 5){
+        const player = userInput();
+        const computer = getComputerChoice();
+        //console.log(player);
+        //console.log(computer);
+        let fight = playRound(player, computer);
+        if(fight==="It's a tie!"){
+            rounds++;
+        } else if(fight==="Computer wins!"){
+            rounds++;
+            computerWins++;
+        } else {
+            rounds++;
+            playerWins++;
+        }
+    } console.log(`Rounds: ${rounds}, Player: ${playerWins}, Computer: ${computerWins} Tie: ${rounds-playerWins-computerWins}`);
+}
+
+game();
