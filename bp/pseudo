@@ -1,6 +1,6 @@
-1. Get user input - rock/paper/sissor
+1. Get user input - rock/paper/scissors
 2. Store user input in variable
-3. Generate random value - rock/paper/sissor
+3. Generate random value - rock/paper/scissors
 4. Store random value in variable
 5. Add counters:
     a. User win
