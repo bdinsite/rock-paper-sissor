@@ -56,7 +56,9 @@ let battles = 0;
 let playerWins = 0;
 let computerWins = 0;
 let totalVictories = 0;
-let result;
+let totalLosses = 0;
+let battleResult;
+let endResult;
 
 // The Game - rounds
 function game() {
@@ -82,25 +84,34 @@ function game() {
 
     if(playerWins>computerWins){
         totalVictories++;
-        result = 'Player wins this battle!';
+        battleResult = 'Player wins this battle!';
     } else if(playerWins<computerWins){
-        result = 'Computer wins this battle!';
+        totalLosses++;
+        battleResult = 'Computer wins this battle!';
     } else if(playerWins===computerWins && playerWins !=0){
-        result = 'This battle ends in a tie!';
+        battleResult = 'This battle ends in a tie!';
     } else {
-        result = 'Game on!';
+        battleResult = 'Game on!';
     }
-    console.log(result);
+    console.log(battleResult);
 } 
 
 
 // The Game - battles
 function battle() {
-    totalVictories = battles = 0;
-    result = "";
+    totalVictories = totalLosses = battles = 0;
+    battleResult = endResult = "";
     while(battles < 3){
         game();
-    } console.log(totalVictories);
+    }
+    if(totalVictories>totalLosses){
+        endResult = 'Yeee-haaa!! Player defeats computer!';
+    } else if(totalVictories<totalLosses){
+        endResult = 'Oh crap!? Computer defeats player!';
+    } else {
+        endResult = "it's a bloody tie!?!";
+    }
+    console.log(endResult);
 }
 
 battle();
