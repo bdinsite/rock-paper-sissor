@@ -1,0 +1,11 @@
+HEADER
+img     heading
+
+BODY
+rock/parper/sissor img      score       rock/paper/sissor img
+win/lose img                            win/lose img
+
+            battle -button          reset -button
+
+FOOTER
+copyright

@@ -1,0 +1,15 @@
+1. Get user input - rock/paper/sissor
+2. Store user input in variable
+3. Generate random value - rock/paper/sissor
+4. Store random value in variable
+5. Add counters:
+    a. User win
+    b. Computer win
+    c. Total rounds
+    d. Total battles
+    e. Total victories
+6. Compare user input vs random value
+7. Update counters
+8. Generate win/lose text
+9. Reset round
+10. Reset game
