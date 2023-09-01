@@ -50,17 +50,19 @@ function playRound(player, computer) {
 
 // console.log(playRound(playerSelection, computerSelection));
 
-// The Game
-
-// Add variables
+// Add game variables
 let rounds = 0;
 let battles = 0;
 let playerWins = 0;
 let computerWins = 0;
 let totalVictories = 0;
+let result;
 
-// Add the game function
+// The Game - rounds
 function game() {
+    rounds = playerWins = computerWins = 0;
+    battles++;
+    console.log(`Battle round: ${battles}`);
     while(rounds < 5){
         const player = userInput();
         const computer = getComputerChoice();
@@ -77,6 +79,28 @@ function game() {
             playerWins++;
         }
     } console.log(`Rounds: ${rounds}, Player: ${playerWins}, Computer: ${computerWins} Tie: ${rounds-playerWins-computerWins}`);
+
+    if(playerWins>computerWins){
+        totalVictories++;
+        result = 'Player wins this battle!';
+    } else if(playerWins<computerWins){
+        result = 'Computer wins this battle!';
+    } else if(playerWins===computerWins && playerWins !=0){
+        result = 'This battle ends in a tie!';
+    } else {
+        result = 'Game on!';
+    }
+    console.log(result);
+} 
+
+
+// The Game - battles
+function battle() {
+    totalVictories = battles = 0;
+    result = "";
+    while(battles < 3){
+        game();
+    } console.log(totalVictories);
 }
 
-game();
+battle();
