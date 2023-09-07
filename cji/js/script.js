@@ -100,7 +100,7 @@ function rockAction(evt){
         fightMessage.textContent = "It's a bloody tie!?!";
         rounds++;
     };
-    if(rounds==5){
+    if(playerWins==5 || computerWins==5){
         endGame();
     }
 }
@@ -124,7 +124,7 @@ function paperAction(evt){
         fightMessage.textContent = "It's a bloody tie!?!";
         rounds++;
     };
-    if(rounds==5){
+    if(playerWins==5 || computerWins==5){
         endGame();
     }
 }
@@ -148,7 +148,7 @@ function scissorsAction(evt){
         fightMessage.textContent = "It's a bloody tie!?!";
         rounds++;
     };
-    if(rounds==5){
+    if(playerWins==5 || computerWins==5){
         endGame();
     };
 }
