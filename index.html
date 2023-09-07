@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RockPaperScissors</title>
+    <script src="./cji/js/script.js" defer></script>
     <link rel="stylesheet" href="./cji/css/styles.css">
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script type="text/javascript" src="./cji/js/script.js"></script>
+    <header>
+        <div class="container">
+            <img src="./cji/img/swordswoman.png" alt="Swordswoman" id="sword">
+            <h2 class="rps">Rock - Paper - Scissors</h2>
+            <img src="./cji/img/pirategirl.png" alt="Pirate Girl" id="pirate">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="weapon">
+                <img src="" alt="" class="player">
+                <h3 class="playerSelect">Player</h3>
+            </div>
+            <div class="battle">
+                <h2 class="fight"></h2>
+                <img src="./cji/img/skull.png" alt="Pirate skull" id="skull">
+                <h4 class="playerScore">Player Score:</h4>
+                <h4 class="computerScore">Computer Score:</h4>
+                <h4 class="tieScore">Ties:</h4>
+            </div>
+            <div class="weapon">
+                <img src="" alt="" class="computer">
+                <h3 class="computerSelect">Computer</h3>
+            </div>
+        </div>
+        <div class="container weapons">
+            <h5 class="weaponSelection">Select your weapon:</h5>
+            <div class="selection">
+               <button class="rock">Rock</button>
+               <button class="paper">Paper</button>
+               <button class="scissors">Scissors</button>
+            </div>
+            <button class="reset">Reset Game</button>
+        </div>
+    </main>
 </body>
 </html>
