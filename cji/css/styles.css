@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    height: 100px;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#sword {
+    height: 80px;
+    margin-right: 30px;
+}
+
+#pirate {
+    height: 70px;
+}
+
+#skull {
+    height: 120px;
+    margin: 40px 10px;
+}
+
+.battle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+main {
+    height: 780px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(252, 248, 241)
+}
+
+button {
+    max-height: 22px;
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 144, 92);
+    background-color: burlywood;
+    color:floralwhite;
+    font-weight: bold;
+}
+
+.selection {
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.weapons{
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.weapons {
+    flex-direction: column;
+}
+
+.weapon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 125px;
+    
+}
+
+h5 {
+    font-size: 20px;
+    color: chocolate;
+}
+
+.player,
+.computer {
+    width: 80px;
+}
+
+.fight {
+    height: 30px;
+    padding-top: 20px;
+    color: red;
+}
+
+.reset {
+    width: 230px;
+    background-color: crimson;
+    display: none;
+}
